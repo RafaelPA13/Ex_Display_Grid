@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: calibri;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    gap: 1rem;
+}
+
+.box {
+    color: #fff;
+    font-size: 3.2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.span-row {
+    grid-row: span 2;
+}
+
+.span-col {
+    grid-column: span 2;
+}
+
+.bg1, .bg2, .bg3, .bg4 {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg1 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3)), url(../images/bg1.jpg);
+}
+
+.bg2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3)), url(../images/bg2.jpg);
+}
+
+.bg3 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3)), url(../images/bg3.jpg);
+}
+
+.bg4 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3)), url(../images/bg4.jpg);
+}
+
+@media (width <= 650px) {
+    .container {
+        grid-template-columns: 1fr;
+      } 
+
+      .span-row {
+        grid-row: span 1;
+      }
+
+      .span-col {
+        grid-column: span 1;
+      }
+}
